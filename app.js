@@ -15,16 +15,10 @@ mongoose.connect('mongodb://localhost:27017/wikiDB', {useNewUrlParser: true, use
 
 // Middleware
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
 
 
 // API Routes
 app.use('/articles', articles);
-
-
-// View engine
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 
 // Server port
